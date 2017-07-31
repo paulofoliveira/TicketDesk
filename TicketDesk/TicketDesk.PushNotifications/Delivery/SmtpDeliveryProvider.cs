@@ -38,10 +38,12 @@ namespace TicketDesk.PushNotifications.Delivery
             SmtpDeliveryProviderConfiguration cfg = (SmtpDeliveryProviderConfiguration)Configuration;
             bool sent = false;
 
-            if (message is SerializableMailMessage smsg)
+            if (message is SerializableMailMessage)
             {
                 try
                 {
+                    SerializableMailMessage smsg = (SerializableMailMessage)message;
+
                     SmtpClient client = new SmtpClient()
                     {
                         Host = cfg.SmtpServer,

@@ -51,7 +51,7 @@ namespace TicketDesk.PushNotifications.Model
         [ScaffoldColumn(false)]
         public string Serialized
         {
-            get => JsonConvert.SerializeObject(this);
+            get { return JsonConvert.SerializeObject(this); }
             set
             {
                 if (string.IsNullOrEmpty(value))
