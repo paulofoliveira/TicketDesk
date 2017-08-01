@@ -28,7 +28,7 @@ namespace TicketDesk.PushNotifications.Delivery
 
         public override async Task<bool> SendNotificationAsync(PushNotificationItem notificationItem, object message, CancellationToken ct)
         {
-            var cfg = (SendGridDeliveryProviderConfiguration)Configuration;
+            var cfg = (SparkPostDeliveryProviderConfiguration)Configuration;
             var sent = false;
 
             MailMessage smsg = message as SerializableMailMessage;
