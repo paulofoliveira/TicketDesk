@@ -152,34 +152,10 @@
   </data>
   <data name="Instructions" xml:space="preserve">
     <value>&lt;p&gt;
-                    Tem sido uma longa estrada, mas finalmente TicketDesk 2.5 está quase pronto para uso em produção. O beta deve ser suficientemente estável para avaliar e testar. Há uma série de arestas ainda, mas estamos trabalhando duro para consertar aqueles antes do lançamento final.
-                &lt;/p&gt;
-                &lt;div class=""&gt;
-
-                    &lt;p&gt;Por favor, mantenha em mente o seguinte ao avaliar a versão beta:&lt;/p&gt;
-                    &lt;ul class="text-muted"&gt;
-                        &lt;li&gt;
-                            TicketDesk 2.5 pode atualizar bancos de dados na versão 2.1.4, mas por favor, faça um backup primeiro!
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            Não TicketDesk 2.5 não suporta integração com Active Directory.
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            Se você encontrar erros, por favor registre o problema no
-                            &lt;a href="https://github.com/NullDesk/TicketDesk/issues"&gt;TicketDesk GitHub issue tracker&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;Esta página será substituída por um painel do usuário antes da versão final.&lt;/li&gt;
-                    &lt;/ul&gt;
-                    &lt;div&gt;
-                        &lt;p&gt;
-                            Para obter a documentação e informações de configurações, por favor visite &lt;a href="https://github.com/NullDesk/TicketDesk/wiki"&gt;GitHub Wiki&lt;/a&gt;
-                        &lt;/p&gt;
-
-
-                    &lt;/div&gt;
-                &lt;/div&gt;</value>
+                    Aplicação de suporte à usuários da Soluçãoi9. Se você está com algum problema, tem alguma dúvida, sugestão ou treinamento faça uma solicitação em nosso portal de chamados.
+                &lt;/p&gt;</value>
   </data>
   <data name="Welcome" xml:space="preserve">
-    <value>Bem-vindo ao TicketDesk 2.5 &lt;span class="small"&gt;(beta)&lt;/span&gt;</value>
+    <value>Bem-vindo ao suporte da Soluçãoi9 &lt;span class="small"&gt;(beta)&lt;/span&gt;</value>
   </data>
 </root>

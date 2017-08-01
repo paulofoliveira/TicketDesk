@@ -126,15 +126,8 @@
         &lt;/p&gt;
 
         &lt;p&gt;
-            TicketDesk 2.5 foi desenvolvido com as seguintes tecnologias:
-        &lt;/p&gt;
-        &lt;ul&gt;
-            &lt;li&gt;Asp.net MVC Framework 5 on .NET 4.5.2&lt;/li&gt;
-            &lt;li&gt;Entity Framework 6x&lt;/li&gt;
-            &lt;li&gt;Bootstrap 3x&lt;/li&gt;
-            &lt;li&gt;Aspnet.Identity Framework 2x&lt;/li&gt;
-            &lt;li&gt;SQL 2008 ou superior &lt;span class="small"&gt;(Compatível com Azure SQL, SQL Express, SQL Express LocalDb e todas as edições do SQL Server)&lt;/span&gt;.&lt;/li&gt;
-        &lt;/ul&gt;</value>
+           A Soluçãoi9 utiliza o TicketDesk como ferramenta para gestão de chamados gerados pelos clientes de seus produtos.
+        &lt;/p&gt;</value>
   </data>
   <data name="Header" xml:space="preserve">
     <value>Sobre o TicketDesk 2.5</value>
