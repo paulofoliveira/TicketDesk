@@ -120,7 +120,7 @@
   <data name="ApiKey" xml:space="preserve">
     <value>ApiKey</value>
   </data>
-  <data name="ApiKey_Description" xml:space="preserve">
+  <data name="ApiKey_SendGrid_Description" xml:space="preserve">
     <value>Informe o ApiKey utilizado para autenticação no provedor SendGrid (este provedor não suporta credenciais de nome de usuário e senha).</value>
   </data>
   <data name="ClickTracking" xml:space="preserve">
@@ -311,5 +311,11 @@
   </data>
   <data name="SendToCustomEmailDisplayName_Description" xml:space="preserve">
     <value>O nome de exibição para o destinatário do e-mail. Usado somente quando o modo está configurado para usar um endereço de e-mail personalizado</value>
+  </data>
+  <data name="SparkPostProvider" xml:space="preserve">
+    <value>Provedor SparkPost (Email)</value>
+  </data>
+  <data name="ApiKey_SparkPost_Description" xml:space="preserve">
+    <value>Informe o ApiKey utilizado para autenticação no provedor SparkPost (este provedor não suporta credenciais de nome de usuário e senha).</value>
   </data>
 </root>

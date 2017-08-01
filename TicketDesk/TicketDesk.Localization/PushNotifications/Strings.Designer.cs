@@ -72,9 +72,18 @@ namespace TicketDesk.Localization.PushNotifications {
         /// <summary>
         ///   Looks up a localized string similar to The ApiKey used to authenticate with SendGrid (this provider does not support username/password credentials)..
         /// </summary>
-        public static string ApiKey_Description {
+        public static string ApiKey_SendGrid_Description {
             get {
-                return ResourceManager.GetString("ApiKey_Description", resourceCulture);
+                return ResourceManager.GetString("ApiKey_SendGrid_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The ApiKey used to authenticate with SparkPost (this provider does not support username/password credentials)..
+        /// </summary>
+        public static string ApiKey_SparkPost_Description {
+            get {
+                return ResourceManager.GetString("ApiKey_SparkPost_Description", resourceCulture);
             }
         }
         
@@ -642,6 +651,15 @@ namespace TicketDesk.Localization.PushNotifications {
         public static string SMTPUserName_Description {
             get {
                 return ResourceManager.GetString("SMTPUserName_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SparkPost Provider (Email).
+        /// </summary>
+        public static string SparkPostProvider {
+            get {
+                return ResourceManager.GetString("SparkPostProvider", resourceCulture);
             }
         }
     }

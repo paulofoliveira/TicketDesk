@@ -7,7 +7,7 @@ namespace TicketDesk.PushNotifications.Delivery
     public class SparkPostDeliveryProviderConfiguration : IDeliveryProviderConfiguration
     {
         [Display(Name = "ApiKey", ResourceType = typeof(Strings))]
-        [LocalizedDescription("ApiKey_Description", NameResourceType = typeof(Strings))]
+        [LocalizedDescription("ApiKey_SparkPost_Description", NameResourceType = typeof(Strings))]
         [Required(ErrorMessageResourceName = "FieldRequired", ErrorMessageResourceType = typeof(Validation))]
         [DataType(DataType.Password)]
         public string ApiKey { get; set; }
