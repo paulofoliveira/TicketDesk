@@ -7,6 +7,7 @@ using System.Linq;
 using System.Threading;
 using TicketDesk.Domain.Legacy.Model;
 using TicketDesk.Domain.Migrations;
+using TicketDesk.Infrastructure;
 using TicketDesk.IO;
 
 namespace TicketDesk.Domain.Legacy
@@ -40,7 +41,7 @@ namespace TicketDesk.Domain.Legacy
                 Canceler = new CancellationTokenSource();
             }
             //setup run time stats
-            var startImport = DateTime.Now;
+            var startImport = DateTimeZone.Now;
             try
             {
                 if (!Canceler.IsCancellationRequested)
@@ -82,7 +83,7 @@ namespace TicketDesk.Domain.Legacy
                     RaiseStatusChangedOnMainThread(new[] { "Cancellation requested" });
                 }
                 //output run time stats
-                var endImport = DateTime.Now;
+                var endImport = DateTimeZone.Now;
                 var ts = endImport - startImport;
                 var time = string.Format("Total Execution Time: {0:00} hr {1:00} mn {2:00} sec ",
                     Math.Truncate(ts.TotalHours), ts.Minutes, ts.Seconds);

@@ -14,6 +14,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using TicketDesk.Infrastructure;
 using TicketDesk.Localization;
 
 namespace TicketDesk.PushNotifications.Model
@@ -62,7 +63,7 @@ namespace TicketDesk.PushNotifications.Model
 
             if (userNoteSettings.IsEnabled && appSettings.AntiNoiseSettings.IsConsolidationEnabled && ScheduledSendDate.HasValue)
             {
-                var now = DateTime.Now;
+                var now = DateTimeZone.Now;
 
                 var currentDelayMinutes = (now - CreatedDate).Minutes;
 

@@ -924,6 +924,10 @@
       <Project>{dbd5279b-9f1c-4915-86a9-6a8f1cf0622d}</Project>
       <Name>TicketDesk.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TicketDesk.Infrastructure\TicketDesk.Infrastructure.csproj">
+      <Project>{8DE2D63E-E02F-4BDE-9717-7A069FCFA9E3}</Project>
+      <Name>TicketDesk.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TicketDesk.IO\TicketDesk.IO.csproj">
       <Project>{d9477c13-68c4-43e0-a30b-f06f444c5358}</Project>
       <Name>TicketDesk.IO</Name>

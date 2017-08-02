@@ -16,6 +16,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using TicketDesk.Domain.Localization;
+using TicketDesk.Infrastructure;
 using TicketDesk.Localization;
 
 namespace TicketDesk.Domain.Model
@@ -86,7 +87,7 @@ namespace TicketDesk.Domain.Model
                 ForActivity = activity,
                 Comment = comment,
                 EventBy = eventByUserId,
-                EventDate = DateTime.Now,
+                EventDate = DateTimeZone.Now,
                 EventDescription = TicketTextUtility.GetTicketEventDescription(activity, newPriority, userName),
                 IsHtml = false
             };

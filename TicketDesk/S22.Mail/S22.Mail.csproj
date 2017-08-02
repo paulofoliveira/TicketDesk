@@ -69,6 +69,12 @@
   <ItemGroup>
     <None Include="Readme.md" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TicketDesk.Infrastructure\TicketDesk.Infrastructure.csproj">
+      <Project>{8de2d63e-e02f-4bde-9717-7a069fcfa9e3}</Project>
+      <Name>TicketDesk.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

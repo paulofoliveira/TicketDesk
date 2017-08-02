@@ -20,6 +20,7 @@ using System.Data.Entity.Validation;
 using System.Linq;
 using System.Threading.Tasks;
 using TicketDesk.Domain.Model;
+using TicketDesk.Infrastructure;
 using TicketDesk.Localization.Domain;
 
 namespace TicketDesk.Domain
@@ -319,7 +320,7 @@ namespace TicketDesk.Domain
         private void PrePopulateModifiedTicket(Ticket modifiedTicket)
         {
             var o = ChangeTracker.Entries<Ticket>().Single(e => e.Entity.TicketId == modifiedTicket.TicketId);
-            var now = DateTime.Now;
+            var now = DateTimeZone.Now;
 
             modifiedTicket.LastUpdateBy = SecurityProvider.CurrentUserId;
             modifiedTicket.LastUpdateDate = now;
@@ -359,7 +360,7 @@ namespace TicketDesk.Domain
             //TODO: double check owner if populated, make sure submitter can set this field if it isn't their id already
             //TODO: double check assigned if populated, make sure submitter can set this field.
 
-            var now = DateTime.Now;
+            var now = DateTimeZone.Now;
             newTicket.Owner = newTicket.Owner ?? SecurityProvider.CurrentUserId;
             newTicket.CreatedBy = SecurityProvider.CurrentUserId;
             newTicket.CreatedDate = now;

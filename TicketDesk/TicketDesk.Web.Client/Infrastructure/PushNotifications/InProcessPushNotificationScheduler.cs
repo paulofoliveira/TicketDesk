@@ -30,11 +30,12 @@ namespace TicketDesk.Web.Client.Infrastructure
 
         private static void OnTimerElapsed(object sender)
         {
+            HostingEnvironment.SetCultures();
             HostingEnvironment.QueueBackgroundWorkItem(
                 async ct =>
                 {
                     var i = 1;
-                        while (i > 0)
+                    while (i > 0)
                     {
                         i = await PushNotificationDeliveryManager.SendNextReadyNotificationAsync(ct);
                     }

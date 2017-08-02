@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net.Mail;
 using System.Text;
 using System.Text.RegularExpressions;
+using TicketDesk.Infrastructure;
 
 namespace S22.Imap {
 	/// <summary>
@@ -54,7 +55,7 @@ namespace S22.Imap {
 			};
 			NameValueCollection header = new NameValueCollection() {
 				{ "MIME-Version", "1.0" },
-				{ "Date", DateTime.Now.ToString("R") },
+				{ "Date", DateTimeZone.Now.ToString("R") },
 				{ "Priority", PriorityMap[m.Priority] },
 				{ "Importance", ImportanceMap[m.Priority] }
 			};
