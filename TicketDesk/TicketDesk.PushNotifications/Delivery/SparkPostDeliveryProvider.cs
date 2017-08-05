@@ -2,10 +2,8 @@
 using S22.Mail;
 using SparkPost;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mail;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using TicketDesk.Localization;
@@ -28,6 +26,8 @@ namespace TicketDesk.PushNotifications.Delivery
 
         public override async Task<bool> SendNotificationAsync(PushNotificationItem notificationItem, object message, CancellationToken ct)
         {
+            var cultureInfo = Thread.CurrentThread.CurrentCulture;
+
             var cfg = (SparkPostDeliveryProviderConfiguration)Configuration;
             var sent = false;
 

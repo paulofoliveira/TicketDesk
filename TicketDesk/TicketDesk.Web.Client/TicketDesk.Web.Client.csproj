@@ -257,6 +257,9 @@
     <Compile Include="Controllers\TicketController.cs" />
     <Compile Include="Controllers\UserAdministrationController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Infrastructure\DbSetupFilter.cs" />
     <Compile Include="Infrastructure\Extensions\EnumerableExtensions.cs" />
     <Compile Include="Infrastructure\Extensions\HtmlHelperExtensions.cs" />
@@ -328,6 +331,7 @@
     </Content>
     <Content Include="Fonts\fontawesome-webfont.svg" />
     <Content Include="Fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
     <Content Include="robots.txt" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />

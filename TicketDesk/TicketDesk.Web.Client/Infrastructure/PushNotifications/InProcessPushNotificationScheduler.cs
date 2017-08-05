@@ -29,8 +29,7 @@ namespace TicketDesk.Web.Client.Infrastructure
         }
 
         private static void OnTimerElapsed(object sender)
-        {
-            HostingEnvironment.SetCultures();
+        {         
             HostingEnvironment.QueueBackgroundWorkItem(
                 async ct =>
                 {
