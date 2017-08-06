@@ -78,6 +78,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TicketDesk.Infrastructure\TicketDesk.Infrastructure.csproj">
+      <Project>{8de2d63e-e02f-4bde-9717-7a069fcfa9e3}</Project>
+      <Name>TicketDesk.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TicketDesk.Localization\TicketDesk.Localization.csproj">
       <Project>{be8715f9-e858-473e-a2b6-561c9edca416}</Project>
       <Name>TicketDesk.Localization</Name>

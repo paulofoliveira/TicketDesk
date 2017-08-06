@@ -11,6 +11,7 @@ using TicketDesk.Web.Client.Models;
 using TicketDesk.Web.Identity;
 using TicketDesk.Web.Identity.Model;
 using TicketDesk.Localization.Controllers;
+using TicketDesk.Infrastructure;
 
 namespace TicketDesk.Web.Client.Controllers
 {
@@ -207,7 +208,7 @@ namespace TicketDesk.Web.Client.Controllers
                 }
                 else if (model.IsLocked)
                 {
-                    newLockoutDate = DateTimeOffset.Now.Add(UserManager.DefaultAccountLockoutTimeSpan);
+                    newLockoutDate = DateTimeOffsetZone.Now.Add(UserManager.DefaultAccountLockoutTimeSpan);
                 }
 
                 var result = await UserManager.SetLockoutEndDateAsync(model.User.Id, newLockoutDate);

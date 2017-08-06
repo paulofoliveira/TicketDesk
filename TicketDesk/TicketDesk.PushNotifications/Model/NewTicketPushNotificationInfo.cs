@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TicketDesk.Infrastructure;
 
 namespace TicketDesk.PushNotifications.Model
 {
@@ -17,7 +18,7 @@ namespace TicketDesk.PushNotifications.Model
             SubscriberNotificationSetting userSettings
             )
         {
-            var now = DateTimeOffset.Now;
+            var now = DateTimeOffsetZone.Now;
             return userSettings.PushNotificationDestinations.Select(dest =>
                 new PushNotificationItem()
                 {

@@ -16,6 +16,7 @@ using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using TicketDesk.Domain.Model;
+using TicketDesk.Infrastructure;
 
 namespace TicketDesk.Domain.Migrations
 {
@@ -51,13 +52,13 @@ namespace TicketDesk.Domain.Migrations
                        Category = "Hardware",
                        CreatedBy = "17f78f38-fa68-445f-90de-38896140db28",
                        TicketStatus = TicketStatus.Active,
-                       CurrentStatusDate = DateTimeOffset.Now,
+                       CurrentStatusDate = DateTimeOffsetZone.Now,
                        CurrentStatusSetBy = "72bdddfb-805a-4883-94b9-aa494f5f52dc",
                        Details =
                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.",
                        IsHtml = false,
                        LastUpdateBy = "72bdddfb-805a-4883-94b9-aa494f5f52dc",
-                       LastUpdateDate = DateTimeOffset.Now,
+                       LastUpdateDate = DateTimeOffsetZone.Now,
                        Owner = "17f78f38-fa68-445f-90de-38896140db28",
                        Priority = "Low",
                        TagList = "test,moretest",
@@ -89,7 +90,7 @@ namespace TicketDesk.Domain.Migrations
                 }
 
 
-                var now = DateTimeOffset.Now.AddDays(n);
+                var now = DateTimeOffsetZone.Now.AddDays(n);
                 context.Tickets.AddOrUpdate(t => t.Title,
                     new Ticket
                     {

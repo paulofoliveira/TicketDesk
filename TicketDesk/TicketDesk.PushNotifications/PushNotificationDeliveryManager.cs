@@ -21,6 +21,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using TicketDesk.PushNotifications.Delivery;
 using TicketDesk.PushNotifications.Model;
+using TicketDesk.Infrastructure;
 
 namespace TicketDesk.PushNotifications
 {
@@ -115,7 +116,7 @@ namespace TicketDesk.PushNotifications
                     await context.PushNotificationItems.Include(n => n.Destination).OrderBy(n => n.ScheduledSendDate).FirstOrDefaultAsync(
                         n =>
                             (n.DeliveryStatus == PushNotificationItemStatus.Scheduled || n.DeliveryStatus == PushNotificationItemStatus.Retrying) &&
-                            n.ScheduledSendDate <= DateTimeOffset.Now, ct);
+                            n.ScheduledSendDate <= DateTimeOffsetZone.Now, ct);
 
                 if (readyNote == null)
                 {

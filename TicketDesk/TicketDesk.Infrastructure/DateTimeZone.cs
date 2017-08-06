@@ -46,4 +46,42 @@ namespace TicketDesk.Infrastructure
         }
 
     }
+
+    public static class DateTimeOffsetZone
+    {
+        private static TimeZoneInfo _timeZoneInfo;
+        private static string _zoneId;
+
+        public static DateTimeOffset Now
+        {
+            get
+            {
+                return TimeZoneInfo.ConvertTime(DateTimeOffset.Now, _timeZoneInfo);
+            }
+        }
+
+        private static TimeZoneInfo GetTimeZoneInfo()
+        {
+            if (_timeZoneInfo == null)
+                _timeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById(ZoneId);
+
+            return _timeZoneInfo;
+        }
+        private static string ZoneId
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(_zoneId))
+                {
+                    if (ConfigurationManager.AppSettings["TimeZoneInfo_ZoneId"] == null)
+                        throw new Exception("Key TimeZoneInfo_ZoneId wasn't found in App or Web config.");
+
+                    _zoneId = ConfigurationManager.AppSettings["TimeZoneInfo_ZoneId"].ToString();
+                }
+
+                return _zoneId;
+            }
+        }
+
+    }
 }

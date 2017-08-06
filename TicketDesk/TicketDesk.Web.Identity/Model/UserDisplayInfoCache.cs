@@ -16,12 +16,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Caching;
 using Microsoft.AspNet.Identity;
+using TicketDesk.Infrastructure;
 
 namespace TicketDesk.Web.Identity.Model
 {
     public class UserDisplayInfoCache : List<UserDisplayInfo>
     {
         private TicketDeskUserManager Manager { get; set; }
+
         public UserDisplayInfoCache(TicketDeskUserManager manager)
         {
             Manager = manager;
@@ -45,7 +47,7 @@ namespace TicketDesk.Web.Identity.Model
 
             if (cacheCollection == null)
             {
-                var policy = new CacheItemPolicy { AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(15d) };
+                var policy = new CacheItemPolicy { AbsoluteExpiration = DateTimeOffsetZone.Now.AddMinutes(15d) };
 
                 cacheCollection = manager.Users.Select(u => new UserDisplayInfo
                 {
