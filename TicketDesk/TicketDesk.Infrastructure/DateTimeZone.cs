@@ -56,7 +56,7 @@ namespace TicketDesk.Infrastructure
         {
             get
             {
-                return TimeZoneInfo.ConvertTime(DateTimeOffset.Now, _timeZoneInfo);
+                return TimeZoneInfo.ConvertTime(DateTimeOffset.Now, GetTimeZoneInfo());
             }
         }
 
